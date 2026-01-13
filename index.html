@@ -3,25 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristen Brown Portfolio</title>
+  <title>Kristen Brown | Apps, Websites, and Business Consulting</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#projects">Current Projects</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Go to homepage">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Kristen Brown
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="projects.html">Projects</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="services.html">Work With Me</a>
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="intro">
-      <h1>Kristen Brown</h1>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Apps, websites, and consulting that turn ideas into revenue.</h1>
+          <p>
+            I help founders and small teams launch faster with clean web builds, practical product thinking, and business setup support.
+            If you need a site, an app, or a clear plan to grow — you’re in the right place.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="services.html">See how we can work together</a>
+            <a class="btn" href="projects.html">View projects</a>
+          </div>
+          <div class="pill-row" aria-label="Highlights">
+            <span class="pill">Web Development</span>
+            <span class="pill">App Prototypes</span>
+            <span class="pill">Business Consulting</span>
+            <span class="pill">Brand + Launch Support</span>
+          </div>
+        </div>
+
+        <aside class="panel pad" aria-label="Quick snapshot">
+          <h2 style="margin:0 0 10px;">What clients hire me for</h2>
+          <p class="small" style="margin:0 0 12px;">
+            Clear deliverables, fast communication, and work you can ship.
+          </p>
+          <div class="meta">
+            <span class="tag">Landing pages + portfolios</span>
+            <span class="tag">Small business websites</span>
+            <span class="tag">App MVP planning</span>
+            <span class="tag">Business setup + systems</span>
+            <span class="tag">Copy + conversion polish</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="panel pad">
+          <h2>About</h2>
+          <p class="lead">
+            I’m Kristen — a builder who blends development + business strategy. I love taking messy ideas and turning them into crisp
+            websites, usable products, and straightforward operating plans.
+          </p>
+          <p class="small" style="margin:0;">
+            Want this to sound more like you? I can tailor it once you share your niche, location, and the types of clients you want.
+          </p>
+        </div>
+        <div class="panel pad">
+          <h2>Best fit if you’re…</h2>
+          <ul style="margin: 10px 0 0; padding-left: 18px; color: var(--muted);">
+            <li>Launching a new business and need a credible online presence.</li>
+            <li>Upgrading an outdated site that isn’t converting.</li>
+            <li>Building an MVP and need a practical plan (and someone who can build it).</li>
+            <li>Overwhelmed and need clear next steps + systems.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured-projects">
+      <div class="container">
+        <h2>Featured app + web projects</h2>
+        <p class="lead">A few examples of what I build. Swap in your real projects (links, screenshots, results) anytime.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Project: Appointment / booking landing</h3>
+            <p>Conversion-focused landing page for a service business with clear messaging, pricing, and an inquiry flow.</p>
+            <div class="meta">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Copy polish</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Project: Portfolio + personal brand site</h3>
+            <p>Fast-loading portfolio with project case studies, services, and contact capture built for client acquisition.</p>
+            <div class="meta">
+              <span class="tag">UX writing</span>
+              <span class="tag">SEO basics</span>
+              <span class="tag">Clean UI</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Project: MVP prototype</h3>
+            <p>Clickable prototype + feature plan for an app concept — focused on validating demand before building too much.</p>
+            <div class="meta">
+              <span class="tag">Product strategy</span>
+              <span class="tag">MVP scope</span>
+              <span class="tag">Roadmap</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a class="btn" href="projects.html">See all projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="consulting-preview">
+      <div class="container">
+        <h2>Business consulting projects (case-study style)</h2>
+        <p class="lead">Examples of how I help clients get organized, launch, and grow with clarity.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Business launch setup</h3>
+            <p>Structured business setup support: registration checklist, basic branding, and launch plan with realistic weekly steps.</p>
+            <div class="meta">
+              <span class="tag">LLC / sole prop</span>
+              <span class="tag">Systems</span>
+              <span class="tag">Launch plan</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Offer + pricing clarity</h3>
+            <p>Reworked a service offer into clear tiers and messaging to make buying simple (and reduce back-and-forth).</p>
+            <div class="meta">
+              <span class="tag">Packaging</span>
+              <span class="tag">Positioning</span>
+              <span class="tag">Sales assets</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Operations cleanup</h3>
+            <p>Helped a small team document processes, set up tools, and create a repeatable client onboarding flow.</p>
+            <div class="meta">
+              <span class="tag">Process</span>
+              <span class="tag">Templates</span>
+              <span class="tag">Onboarding</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a class="btn" href="consulting.html">View consulting work</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Let’s talk about your project</h2>
+          <p>
+            Tell me what you’re building and what “success” looks like. I’ll respond with next steps and a simple plan.
+          </p>
+
+          <div class="split">
+            <div class="panel pad" style="background: rgba(255,255,255,0.02);">
+              <h3 style="margin:0 0 10px;">Quick contact</h3>
+              <p class="small" style="margin:0 0 12px;">
+                Prefer email? Reach me at <a href="mailto:kristen.brown@columbia.edu">kristen.brown@columbia.edu</a>.
+              </p>
+              <p class="small" style="margin:0;">
+                If you already know what you need, jump to <a href="services.html">Work With Me</a> for packages and details.
+              </p>
+            </div>
+
+            <div class="panel pad">
+              <h3 style="margin:0 0 6px;">Project inquiry</h3>
+              <p class="small" style="margin:0 0 8px;">This form goes straight to my inbox.</p>
+              <form action="https://formspree.io/f/xzzddobk" method="POST">
+                <label>
+                  Name
+                  <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>
+                  What do you want to build?
+                  <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit">Send inquiry</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>&copy; 2026 Kristen Brown</span>
+      <span class="small">
+        <a href="projects.html">Projects</a> · <a href="consulting.html">Consulting</a> · <a href="services.html">Work With Me</a>
+      </span>
+    </div>
+  </footer>
 </body>
 </html>
