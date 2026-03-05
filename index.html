@@ -9,89 +9,183 @@
 
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Systems Built</a></li>
-      <li><a href="#projects">Current Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<main class="layout">
 
-<main>
+  <!-- LEFT: STICKY SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <h1 class="name">Kristen Brown</h1>
+      <p class="role">AI Product Builder</p>
+      <p class="tagline">
+        I build AI-driven systems and automation pipelines that improve how organizations operate.
+      </p>
 
-<!-- HERO -->
-<section class="intro">
-  <h1>Kristen Brown</h1>
-  <p>AI Product Builder | Automation Engineer | Founder of Savoir POS</p>
-</section>
+      <nav class="side-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I build intelligent systems that improve how organizations operate.
-    My work spans AI-driven product development, automation pipelines,
-    and data-informed platforms across hospitality, government, and
-    digital commerce.
-  </p>
-</section>
+      <div class="social">
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:YOUR_EMAIL">Email</a>
+      </div>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2>Systems I've Built</h2>
+      <p class="footer-note">
+        Built with HTML + CSS, deployed on Vercel.
+      </p>
+    </div>
+  </aside>
 
-  <div class="project">
-    <h3>Savoir POS</h3>
-    <p>
-      AI-powered restaurant operating system designed to improve
-      service coordination, guest insights, and operational efficiency.
-    </p>
-  </div>
+  <!-- RIGHT: CONTENT -->
+  <section class="content">
 
-  <div class="project">
-    <h3>Government Document Automation</h3>
-    <p>
-      Automated document intake and indexing pipeline using workflow
-      orchestration and AI extraction.
-    </p>
-  </div>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I’m a Columbia CS student and founder building practical AI products. I work across product thinking,
+        automation, and data systems, translating messy real-world operations into clean workflows and usable software.
+      </p>
+      <p>
+        Right now, I’m focused on Savoir POS, an AI-powered restaurant operating system, plus automation projects
+        that streamline document intake, extraction, and indexing.
+      </p>
+    </section>
 
-  <div class="project">
-    <h3>TrendPulse</h3>
-    <p>
-      Trend intelligence system helping creators discover commissionable
-      products based on emerging social signals.
-    </p>
-  </div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <a class="top-link" href="#contact">Contact ↗</a>
+      </div>
 
-</section>
+      <div class="card">
+        <div class="card-meta">
+          <span class="date">2025 – 2026</span>
+          <a class="card-title" href="#" target="_blank" rel="noreferrer">Automation Developer, Recorder of Deeds</a>
+        </div>
+        <p class="card-desc">
+          Built workflow automations for document intake and indexing, integrating AI extraction, databases, and
+          webhooks to reduce manual processing and improve turnaround time.
+        </p>
+        <div class="tags">
+          <span class="tag">n8n</span>
+          <span class="tag">Postgres</span>
+          <span class="tag">Webhooks</span>
+          <span class="tag">AI Extraction</span>
+        </div>
+      </div>
 
-<!-- CURRENT PROJECTS -->
-<section id="projects">
-  <h2>Current Projects</h2>
+      <div class="card">
+        <div class="card-meta">
+          <span class="date">2024 – 2025</span>
+          <a class="card-title" href="#" target="_blank" rel="noreferrer">Product + UX Projects, Columbia</a>
+        </div>
+        <p class="card-desc">
+          Designed and prototyped product experiences, conducted interviews, built user flows, and collaborated in Figma
+          to ship class and team projects with strong product narratives.
+        </p>
+        <div class="tags">
+          <span class="tag">Figma</span>
+          <span class="tag">User Research</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">UI Design</span>
+        </div>
+      </div>
 
-  <div class="project">
-    <h3>Title Processing Automation</h3>
-    <p>
-      AI-assisted title processing pipeline that extracts data from
-      documents and structures it for database indexing.
-    </p>
-  </div>
+      <div class="resume-row">
+        <a class="button ghost" href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noreferrer">View Resume ↗</a>
+      </div>
+    </section>
 
-</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <a class="top-link" href="#contact">Work with me ↗</a>
+      </div>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>
-    <a href="https://github.com">GitHub</a> |
-    <a href="https://linkedin.com">LinkedIn</a>
-  </p>
-</section>
+      <div class="card">
+        <div class="card-meta">
+          <span class="date">Founder</span>
+          <a class="card-title" href="https://www.savoirpos.com" target="_blank" rel="noreferrer">Savoir POS ↗</a>
+        </div>
+        <p class="card-desc">
+          AI-powered restaurant operating system designed to improve service coordination, guest insights, and
+          operational efficiency. MVP focuses on AI suggestions and real-time team communication.
+        </p>
+        <div class="tags">
+          <span class="tag">Supabase</span>
+          <span class="tag">OpenAI</span>
+          <span class="tag">Postgres</span>
+          <span class="tag">Product Strategy</span>
+        </div>
+        <div class="card-links">
+          <a class="button" href="YOUR_DEMO_LINK" target="_blank" rel="noreferrer">Demo</a>
+          <a class="button ghost" href="YOUR_GITHUB_REPO" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-meta">
+          <span class="date">Automation</span>
+          <a class="card-title" href="#" target="_blank" rel="noreferrer">Title Processing Pipeline ↗</a>
+        </div>
+        <p class="card-desc">
+          Document processing pipeline that extracts structured data from title documents and writes clean records to a database.
+          Built for reliability, transparency, and auditability.
+        </p>
+        <div class="tags">
+          <span class="tag">n8n</span>
+          <span class="tag">OCR</span>
+          <span class="tag">Postgres</span>
+          <span class="tag">Validation</span>
+        </div>
+        <div class="card-links">
+          <a class="button ghost" href="YOUR_GITHUB_REPO" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-meta">
+          <span class="date">Product</span>
+          <a class="card-title" href="#" target="_blank" rel="noreferrer">TrendPulse (Button project) ↗</a>
+        </div>
+        <p class="card-desc">
+          Real-time trend detection layer that helps creators discover affiliate-ready products tied to emerging trends using social signals
+          and historical catalog performance.
+        </p>
+        <div class="tags">
+          <span class="tag">Data</span>
+          <span class="tag">Creator Economy</span>
+          <span class="tag">Product Narrative</span>
+          <span class="tag">PRFAQ</span>
+        </div>
+        <div class="card-links">
+          <a class="button ghost" href="YOUR_DECK_LINK" target="_blank" rel="noreferrer">Deck</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        The fastest way to reach me is email. I’m open to product roles, technical PM roles, and collaboration on AI automation systems.
+      </p>
+
+      <div class="contact-row">
+        <a class="button" href="mailto:kristenelisebrown">Email me</a>
+        <a class="button ghost" href="https://www.linkedin.com/in/kristenelisebrown" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button ghost" href="https://github.com/hatshepsutgoldstein" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+  </section>
 
 </main>
 
