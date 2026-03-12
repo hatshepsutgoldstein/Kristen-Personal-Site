@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Handyman Demo | Kristen Brown</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="demo-handyman.css" />
 </head>
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <div class="logo">Handyman</div>
+      <div class="logo">
+        <img src="images/Real_Estate__28101_29.jpg" alt="Handyman logo" />
+        <span>Handyman</span>
+      </div>
       <nav class="nav-links">
-        <a href="#" onclick="return false;">Home</a>
+        <a href="index.html">Home</a>
         <a href="#" onclick="return false;">About</a>
         <a href="#" onclick="return false;">Blog</a>
-        <a href="#" onclick="return false;">Services</a>
+        <a href="demo-handyman-services.html">Services</a>
         <a href="#" onclick="return false;">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero reveal">
       <div class="hero-content">
         <span class="pill">Available 24/7</span>
         <h1>Your trusted partner for home repairs</h1>
@@ -39,14 +43,23 @@
         <p class="hero-phone">(959) 555-0123</p>
         <div class="hero-stats">
           <div>
+            <div class="rating-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
             <p class="stat-number">4.9</p>
             <p class="stat-label">on Google</p>
           </div>
           <div>
+            <div class="rating-icon">
+              <i class="fa-solid fa-snowflake"></i>
+            </div>
             <p class="stat-number">4.85</p>
             <p class="stat-label">on Yelp</p>
           </div>
           <div>
+            <div class="rating-icon">
+              <i class="fa-solid fa-g"></i>
+            </div>
             <p class="stat-number">4.6</p>
             <p class="stat-label">on Trustpilot</p>
           </div>
@@ -54,7 +67,7 @@
       </div>
     </section>
 
-    <section class="highlight">
+    <section class="highlight reveal">
       <div class="highlight-card">
         <p class="highlight-number">25</p>
         <p class="highlight-label">Years of activity</p>
@@ -73,7 +86,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-blue reveal">
       <div class="section-header">
         <h2>Get professional handyman services</h2>
         <a href="#" onclick="return false;">Discover all services</a>
@@ -82,24 +95,23 @@
         From fixing a leaky faucet to remodeling your entire kitchen, you're covered with a
         dedicated team ready to help.
       </p>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Exterior works</h3>
+          <p>Landscaping, painting, garage restoration, and seasonal upgrades.</p>
+        </div>
+        <div class="service-card">
+          <h3>Interior works</h3>
+          <p>Kitchen, bathroom, stairs, bedroom, and guest room refreshes.</p>
+        </div>
+        <div class="service-card">
+          <h3>Carpentry</h3>
+          <p>Custom woodwork, furniture assembly, and renovation details.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="service-grid">
-      <div class="service-card">
-        <h3>Exterior works</h3>
-        <p>Landscaping, painting, garage restoration, and seasonal upgrades.</p>
-      </div>
-      <div class="service-card">
-        <h3>Interior works</h3>
-        <p>Kitchen, bathroom, stairs, bedroom, and guest room refreshes.</p>
-      </div>
-      <div class="service-card">
-        <h3>Carpentry</h3>
-        <p>Custom woodwork, furniture assembly, and renovation details.</p>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section reveal">
       <div class="section-header">
         <h2>Our work process</h2>
         <a href="#" onclick="return false;">How to reach us</a>
@@ -123,7 +135,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-blue reveal">
       <div class="section-header">
         <h2>What clients say about us</h2>
         <a href="#" onclick="return false;">Read more</a>
@@ -157,7 +169,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer reveal">
     <div>
       <h4>Your trusted partner for home repairs</h4>
       <p>Let us be your partner in creating a space that reflects your style and meets your needs.</p>
@@ -167,7 +179,7 @@
         <p class="footer-title">Company</p>
         <a href="#" onclick="return false;">Home</a>
         <a href="#" onclick="return false;">About</a>
-        <a href="#" onclick="return false;">Services</a>
+          <a href="demo-handyman-services.html">Services</a>
         <a href="#" onclick="return false;">Contact</a>
       </div>
       <div>
@@ -185,5 +197,21 @@
       </div>
     </div>
   </footer>
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
 </body>
 </html>

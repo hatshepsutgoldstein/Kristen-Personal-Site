@@ -5,8 +5,12 @@
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: #f5f2ea;
+  background: #ffffff;
   color: #1f1f1f;
+}
+
+:root {
+  --brand-blue: #0b5bd3;
 }
 
 a {
@@ -15,7 +19,7 @@ a {
 }
 
 .nav {
-  background: #f5f2ea;
+  background: #ffffff;
   border-bottom: 1px solid #e4ded3;
   position: sticky;
   top: 0;
@@ -35,6 +39,16 @@ a {
 .logo {
   font-weight: 700;
   letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .nav-links {
@@ -63,7 +77,13 @@ main {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 28px;
   align-items: stretch;
-  padding: 40px 0;
+  padding: 48px;
+  border-radius: 24px;
+  color: #ffffff;
+  background: linear-gradient(120deg, rgba(10, 10, 10, 0.82), rgba(10, 10, 10, 0.35)),
+    url("images/handyman-hero.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .pill {
@@ -84,7 +104,7 @@ main {
 .hero p {
   margin: 0 0 18px;
   font-size: 18px;
-  color: #3f3f3f;
+  color: #e6e6e6;
 }
 
 .hero-actions {
@@ -94,8 +114,8 @@ main {
 }
 
 .primary-button {
-  background: #1f1f1f;
-  color: #f5f2ea;
+  background: var(--brand-blue);
+  color: #ffffff;
   padding: 12px 20px;
   border-radius: 999px;
   font-weight: 600;
@@ -104,7 +124,8 @@ main {
 .secondary-link {
   padding: 12px 0;
   font-weight: 600;
-  color: #1f1f1f;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .hero-card {
@@ -115,18 +136,25 @@ main {
   display: grid;
   gap: 16px;
   align-content: start;
+  color: #1f1f1f;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hero-card p {
+  color: #2b2b2b;
 }
 
 .hero-card-title {
   margin: 0;
   font-weight: 600;
-  color: #3f3f3f;
+  color: #2f2f2f;
 }
 
 .hero-phone {
   font-size: 28px;
   margin: 0;
   font-weight: 700;
+  color: #1f1f1f;
 }
 
 .hero-stats {
@@ -138,12 +166,25 @@ main {
 .stat-number {
   margin: 0;
   font-weight: 700;
+  color: #1f1f1f;
 }
 
 .stat-label {
   margin: 0;
   font-size: 12px;
-  color: #6b6b6b;
+  color: #5a5a5a;
+}
+
+.rating-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1f1f1f;
+  color: #f2c94c;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
 .highlight {
@@ -173,6 +214,23 @@ main {
 
 .section {
   padding: 28px 0;
+}
+
+.section-blue {
+  background: var(--brand-blue);
+  color: #ffffff;
+  margin: 40px -24px 0;
+  padding: 40px 24px;
+  border-radius: 28px;
+}
+
+.section-blue p,
+.section-blue .section-header a {
+  color: #e6eefc;
+}
+
+.section-blue .section-header h2 {
+  color: #ffffff;
 }
 
 .section-header {
@@ -240,6 +298,31 @@ main {
   color: #6b6b6b;
 }
 
+.testimonial-card {
+  background: #e8f0ff;
+  border-color: #d2e1ff;
+}
+
+.testimonial-card p {
+  color: #1f2a44;
+}
+
+.testimonial-card .testimonial-role {
+  color: #465b7b;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .footer {
   margin-top: 40px;
   padding: 40px 24px;
@@ -269,9 +352,127 @@ main {
   color: #4a4a4a;
 }
 
+.service-hero {
+  background: linear-gradient(120deg, rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.2)),
+    url("images/handyman-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  padding: 60px;
+  color: #ffffff;
+  margin-top: 24px;
+}
+
+.service-hero-content h1 {
+  margin: 0 0 12px;
+  font-size: 42px;
+}
+
+.service-hero-content p {
+  margin: 0;
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+.service-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.service-tile {
+  background: #ffffff;
+  border: 1px solid #e4ded3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.service-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-label {
+  padding: 12px 16px;
+  font-weight: 700;
+}
+
+.service-image-exterior {
+  background-image: url("images/design_build_construction.jpg");
+}
+
+.service-image-interior {
+  background-image: url("images/images.jpeg");
+}
+
+.service-image-carpentry {
+  background-image: url("images/01-ua-steps-to-design-and-build-your-house-1200x630-crop-1-q80.jpg");
+}
+
+.service-image-plumbing {
+  background-image: url("images/how-does-plumbing-work-e1548696261445-1024x658.jpeg");
+}
+
+.service-image-maintenance {
+  background-image: url("images/Home-Maintenance.jpg");
+}
+
+.service-image-quickfix {
+  background-image: url("images/brkmarketing-create-an-image-of-a-handyman-in-nairobi-fixing-a-9dc52b28-fe77-4dd8-8260-94bf90e6eb02-1.webp");
+}
+
+.service-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  font-weight: 600;
+}
+
 @media (max-width: 960px) {
+  .service-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .service-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
   .hero {
     grid-template-columns: 1fr;
+    padding: 32px;
   }
 
   .highlight {
@@ -288,11 +489,38 @@ main {
 }
 
 @media (max-width: 640px) {
+  main {
+    padding: 16px;
+  }
+
   .highlight {
     grid-template-columns: 1fr;
   }
 
   .hero h1 {
     font-size: 36px;
+  }
+
+  .hero {
+    padding: 24px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-blue {
+    margin: 24px -16px 0;
+    padding: 32px 16px;
+    border-radius: 20px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
   }
 }

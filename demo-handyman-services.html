@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Handyman Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="demo-handyman.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/Real_Estate__28101_29.jpg" alt="Handyman logo" />
+        <span>Handyman</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="return false;">About</a>
+        <a href="#" onclick="return false;">Blog</a>
+        <a href="demo-handyman-services.html">Services</a>
+        <a href="#" onclick="return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero reveal">
+      <div class="service-hero-content">
+        <h1>Services</h1>
+        <p>Explore the full range of handyman services designed to keep your home in top shape.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <h2>Our service categories</h2>
+        <a href="#" onclick="return false;">Discover all services</a>
+      </div>
+      <div class="service-gallery">
+        <div class="service-tile">
+          <div class="service-image service-image-exterior"></div>
+          <div class="service-label">Exterior works</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-image service-image-interior"></div>
+          <div class="service-label">Interior works</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-image service-image-carpentry"></div>
+          <div class="service-label">Carpentry</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-image service-image-plumbing"></div>
+          <div class="service-label">Plumbing</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-image service-image-maintenance"></div>
+          <div class="service-label">Maintenance</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-image service-image-quickfix"></div>
+          <div class="service-label">Quick fixes</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-blue service-cta reveal">
+      <div class="section-header">
+        <h2>Ready to transform your home?</h2>
+        <a href="#" onclick="return false;" class="ghost-button">Get started with us</a>
+      </div>
+      <p>We’re ready to help you plan the next upgrade or repair.</p>
+    </section>
+  </main>
+
+  <footer class="footer reveal">
+    <div>
+      <h4>Your trusted partner for home repairs</h4>
+      <p>Let us be your partner in creating a space that reflects your style and meets your needs.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <p class="footer-title">Company</p>
+        <a href="demo-handyman.html">Home</a>
+        <a href="#" onclick="return false;">About</a>
+        <a href="demo-handyman-services.html">Services</a>
+        <a href="#" onclick="return false;">Contact</a>
+      </div>
+      <div>
+        <p class="footer-title">Services</p>
+        <a href="#" onclick="return false;">Interior works</a>
+        <a href="#" onclick="return false;">Exterior works</a>
+        <a href="#" onclick="return false;">Carpentry</a>
+        <a href="#" onclick="return false;">Plumbing</a>
+      </div>
+      <div>
+        <p class="footer-title">More content</p>
+        <a href="#" onclick="return false;">Blog posts</a>
+        <a href="#" onclick="return false;">Other services</a>
+        <a href="#" onclick="return false;">404 page</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>
